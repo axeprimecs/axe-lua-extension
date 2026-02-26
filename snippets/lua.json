@@ -1,0 +1,249 @@
+{
+    "Register Paint Event": {
+        "prefix": "event_paint",
+        "body": [
+            "events.register(\"paint\", function()",
+            "\t$0",
+            "end)"
+        ],
+        "description": "Register a paint event callback"
+    },
+    "Register CreateMove Event": {
+        "prefix": "event_createmove",
+        "body": [
+            "events.register(\"create_move\", function(cmd)",
+            "\t$0",
+            "end)"
+        ],
+        "description": "Register a create_move event callback"
+    },
+    "Register GameEvent": {
+        "prefix": "event_game",
+        "body": [
+            "events.register(\"game_event\", function(event)",
+            "\t$0",
+            "end, { \"${1:player_death}\" })"
+        ],
+        "description": "Register a game_event callback with an event filter"
+    },
+    "UI Checkbox": {
+        "prefix": "ui_checkbox",
+        "body": [
+            "local ${1:enabled} = false",
+            "ui.register(function()",
+            "\t${1:enabled} = ui.check_box(\"${2:Enable Feature}\", ${1:enabled})",
+            "end, \"${3:misc}\")"
+        ],
+        "description": "Create a checkbox UI element"
+    },
+    "UI Slider Float": {
+        "prefix": "ui_slider_float",
+        "body": [
+            "local ${1:value} = 1.0",
+            "ui.register(function()",
+            "\t${1:value} = ui.slider_float(\"${2:Slider}\", ${1:value}, ${3:0.0}, ${4:10.0}, \"${5:%.1f}\")",
+            "end, \"${6:misc}\")"
+        ],
+        "description": "Create a float slider UI element"
+    },
+    "UI Combo": {
+        "prefix": "ui_combo",
+        "body": [
+            "local ${1:selected} = 0",
+            "ui.register(function()",
+            "\t${1:selected} = ui.combo(\"${2:Options}\", ${1:selected}, { \"${3:Option 1}\", \"${4:Option 2}\" })",
+            "end, \"${5:misc}\")"
+        ],
+        "description": "Create a combo box UI element"
+    },
+    "UI Multi Combo": {
+        "prefix": "ui_multi_combo",
+        "body": [
+            "local ${1:selected} = 0",
+            "ui.register(function()",
+            "\t${1:selected} = ui.multi_combo(\"${2:Modes}\", ${1:selected}, { \"${3:Mode A}\", \"${4:Mode B}\" })",
+            "end, \"${5:misc}\")"
+        ],
+        "description": "Create a multi-select combo box UI element"
+    },
+    "Get Local Player": {
+        "prefix": "get_local_player",
+        "body": [
+            "local local_player = entities.get_local_pawn()"
+        ],
+        "description": "Get the local player pawn entity"
+    },
+    "For Loop (pairs)": {
+        "prefix": "forp",
+        "body": [
+            "for ${1:k}, ${2:v} in pairs(${3:table}) do",
+            "\t$0",
+            "end"
+        ],
+        "description": "Iterate over a table using pairs"
+    },
+    "For Loop (ipairs)": {
+        "prefix": "fori",
+        "body": [
+            "for ${1:i}, ${2:v} in ipairs(${3:table}) do",
+            "\t$0",
+            "end"
+        ],
+        "description": "Iterate over an array using ipairs"
+    },
+    "For Loop (Numeric)": {
+        "prefix": "forn",
+        "body": [
+            "for ${1:i} = ${2:1}, ${3:10} do",
+            "\t$0",
+            "end"
+        ],
+        "description": "Numeric for loop"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} then",
+            "\t$0",
+            "end"
+        ],
+        "description": "If statement"
+    },
+    "If Else Statement": {
+        "prefix": "ife",
+        "body": [
+            "if ${1:condition} then",
+            "\t$0",
+            "else",
+            "\t",
+            "end"
+        ],
+        "description": "If-else statement"
+    },
+    "Function Declaration": {
+        "prefix": "func",
+        "body": [
+            "local function ${1:name}(${2:args})",
+            "\t$0",
+            "end"
+        ],
+        "description": "Local function declaration"
+    },
+    "Render Text": {
+        "prefix": "render_text",
+        "body": [
+            "render.text(${1:100}, ${2:100}, \"${3:Hello}\", color(${4:255}, ${5:255}, ${6:255}), ${7:0})"
+        ],
+        "description": "Draw text on screen"
+    },
+    "Render Rect": {
+        "prefix": "render_rect",
+        "body": [
+            "render.rect(${1:x}, ${2:y}, ${3:w}, ${4:h}, color(${5:255}, ${6:255}, ${7:255}), ${8:0})"
+        ],
+        "description": "Draw an outlined rectangle"
+    },
+    "Render Filled Rect": {
+        "prefix": "render_filled_rect",
+        "body": [
+            "render.filled_rect(${1:x}, ${2:y}, ${3:w}, ${4:h}, color(${5:0}, ${6:0}, ${7:0}, ${8:150}), ${9:0})"
+        ],
+        "description": "Draw a filled rectangle"
+    },
+    "Render Line": {
+        "prefix": "render_line",
+        "body": [
+            "render.line(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, color(${5:255}, ${6:255}, ${7:255}), ${8:1.0})"
+        ],
+        "description": "Draw a line"
+    },
+    "Render Circle": {
+        "prefix": "render_circle",
+        "body": [
+            "render.circle(${1:x}, ${2:y}, ${3:radius}, color(${4:255}, ${5:255}, ${6:255}), ${7:32})"
+        ],
+        "description": "Draw an outlined circle"
+    },
+    "Render Target Line": {
+        "prefix": "world_to_screen",
+        "body": [
+            "local ${1:screen} = math.world_to_screen(${2:world_pos})",
+            "if ${1:screen} then",
+            "\t$0",
+            "end"
+        ],
+        "description": "Convert 3D world pos to 2D screen pos"
+    },
+    "UI Button": {
+        "prefix": "ui_button",
+        "body": [
+            "if ui.button(\"${1:Click Me!}\") then",
+            "\t$0",
+            "end"
+        ],
+        "description": "ImGui click-able button"
+    },
+    "UI Color Edit": {
+        "prefix": "ui_color",
+        "body": [
+            "local ${1:col} = color(255, 255, 255, 255)",
+            "ui.register(function()",
+            "\t${1:col} = ui.color_edit(\"${2:Color Picker}\", ${1:col})",
+            "end, \"misc\")"
+        ],
+        "description": "ImGui color picker"
+    },
+    "UI Text": {
+        "prefix": "ui_text",
+        "body": [
+            "ui.text(\"${1:Information text.}\")"
+        ],
+        "description": "ImGui static text"
+    },
+    "HTTP Get": {
+        "prefix": "http_get",
+        "body": [
+            "local ${1:res} = http.get(\"${2:https://api.example.com}\")",
+            "if ${1:res}.success then",
+            "\tprint(${1:res}.body)",
+            "end"
+        ],
+        "description": "Synchronous HTTP GET request"
+    },
+    "HTTP Get Async": {
+        "prefix": "http_get_async",
+        "body": [
+            "http.get_async(\"${1:https://api.example.com}\", function(res)",
+            "\tif res.success then",
+            "\t\tprint(res.body)",
+            "\tend",
+            "end)"
+        ],
+        "description": "Asynchronous HTTP GET request"
+    },
+    "File Read": {
+        "prefix": "fs_read",
+        "body": [
+            "if fs.exists(\"${1:config.txt}\") then",
+            "\tlocal ${2:content} = fs.read(\"${1:config.txt}\")",
+            "\t$0",
+            "end"
+        ],
+        "description": "Read text from file"
+    },
+    "File Write": {
+        "prefix": "fs_write",
+        "body": [
+            "fs.write(\"${1:config.txt}\", ${2:data})"
+        ],
+        "description": "Write text to file"
+    },
+    "Load Texture": {
+        "prefix": "load_texture",
+        "body": [
+            "local ${1:svg_path} = resources.path(\"${2:image.svg}\")",
+            "render.load_svg(\"${3:my_image}\", ${1:svg_path}, ${4:100}, ${5:100})"
+        ],
+        "description": "Load SVG from resources"
+    }
+}

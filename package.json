@@ -1,0 +1,53 @@
+{
+    "name": "axeprime-language-server",
+    "displayName": "Axe Prime Language Server",
+    "description": "A Lua language server that supports the Axe Prime API, based on lua-language-server.",
+    "version": "1.0.0",
+    "publisher": "turkl",
+    "icon": "axe.png",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Linters"
+    ],
+    "keywords": [
+        "json",
+        "jsonc",
+        "lua",
+        "axe",
+        "cs2"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/axe-prime-language-server.git"
+    },
+    "bugs": {
+        "url": "https://github.com/your-username/axe-prime-language-server/issues"
+    },
+    "activationEvents": [
+        "onLanguage:lua"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/lua.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "@types/node": "18.x",
+        "typescript": "^5.1.3"
+    }
+}
