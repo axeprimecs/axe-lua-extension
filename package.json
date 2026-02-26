@@ -3,7 +3,7 @@
     "displayName": "Axe Prime Language Server",
     "description": "A Lua language server that supports the Axe Prime API, based on lua-language-server.",
     "version": "1.0.0",
-    "publisher": "turkl",
+    "publisher": "axeprime",
     "icon": "axe.png",
     "engines": {
         "vscode": "^1.80.0"
