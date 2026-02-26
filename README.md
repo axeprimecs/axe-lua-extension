@@ -2,7 +2,7 @@
   <h1>Axe Prime Language Server</h1>
   <p><strong>A highly advanced Lua language server that supports the Axe Prime API, powered by zero-compromise type definitions.</strong></p>
 
-  [![Version](https://img.shields.io/badge/Version-1.0.0-pink.svg?style=for-the-badge&logo=visual-studio-code)](https://github.com/TurkLee/axe-prime-language-server)
+  [![Version](https://img.shields.io/badge/Version-1.0.0-pink.svg?style=for-the-badge&logo=visual-studio-code)](https://github.com/axeprimecs/axe-lua-extension)
   [![License](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 </div>
 
@@ -56,4 +56,4 @@ callbacks.register("create_move", on_create_move)
 ## 🐛 Issues & Support
 
 Found a missing API definition? Want to suggest a new snippet? 
-Reach out on Discord or [Open an Issue](https://github.com/TurkLee/axe-prime-language-server/issues).
+Reach out on Discord or [Open an Issue](https://github.com/axeprimecs/axe-lua-extension/issues).

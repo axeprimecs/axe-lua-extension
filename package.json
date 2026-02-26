@@ -22,10 +22,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-username/axe-prime-language-server.git"
+        "url": "https://github.com/axeprimecs/axe-lua-extension.git"
     },
     "bugs": {
-        "url": "https://github.com/your-username/axe-prime-language-server/issues"
+        "url": "https://github.com/axeprimecs/axe-lua-extension/issues"
     },
     "activationEvents": [
         "onLanguage:lua"
