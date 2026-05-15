@@ -2,7 +2,7 @@
   <h1>Axe Prime Language Server</h1>
   <p><strong>A highly advanced Lua language server that supports the Axe Prime API, powered by zero-compromise type definitions.</strong></p>
 
-  [![Version](https://img.shields.io/badge/Version-1.0.1-pink.svg?style=for-the-badge&logo=visual-studio-code)](https://github.com/axeprimecs/axe-lua-extension)
+  [![Version](https://img.shields.io/badge/Version-1.0.2-pink.svg?style=for-the-badge&logo=visual-studio-code)](https://github.com/axeprimecs/axe-lua-extension)
   [![License](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 </div>
 

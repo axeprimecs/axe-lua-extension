@@ -392,6 +392,15 @@ function lag_record:get_bone_pos(bone_idx) end
 
 
 events = {}
+---@overload fun(name: "paint",                  callback: fun()):                                                                    integer
+---@overload fun(name: "create_move",             callback: fun(cmd: user_cmd, pre: boolean)):                                        integer
+---@overload fun(name: "frame_stage",             callback: fun(stage: integer, pre: boolean)):                                       integer
+---@overload fun(name: "frame_stage_notify",      callback: fun(stage: integer, pre: boolean)):                                       integer
+---@overload fun(name: "level_init",              callback: fun(map: string, pre: boolean)):                                          integer
+---@overload fun(name: "level_shutdown",          callback: fun(pre: boolean)):                                                       integer
+---@overload fun(name: "fire_event_client_side",  callback: fun(name: string, server_only: boolean, pre: boolean)):                   integer
+---@overload fun(name: "verify_input",            callback: fun(view_angle: vec3, pre: boolean)):                                     integer
+---@overload fun(name: "game_event",              callback: fun(event: game_event), filters?: table):                                 integer
 ---@param name string
 ---@param callback function
 ---@param filters? table
